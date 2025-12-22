@@ -28,7 +28,7 @@ At the same time, **quantum intuition is frequently invoked as a remedy**—thro
 This project exists to **invert that logic**.
 Rather than assuming a quantum evolutionary algorithm and measuring performance, we ask a prior question:
 
-> *Before building an algorithm, do the core quantum mechanisms themselves support evolutionary escape—or do they conflict with it?*
+ *Before building an algorithm, do the core quantum mechanisms themselves support evolutionary escape—or do they conflict with it?*
 
 ---
 
