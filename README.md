@@ -63,4 +63,3 @@ The absence of these claims is deliberate: **the goal is not to argue that a qua
 
 ---
 
-say the word.
