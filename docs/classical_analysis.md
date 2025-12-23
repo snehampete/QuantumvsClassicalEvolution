@@ -228,7 +228,7 @@ This makes it ideal for isolating **ruggedness** from **deception**.
 
 ---
 
-### Why Rastrigin is rugged (mechanism, not buzzword)
+### Why Rastrigin is rugged 
 
 * The cosine term introduces **regularly spaced local maxima and minima**
 * Gradients are locally misleading but not globally inverted
@@ -237,7 +237,7 @@ This makes it ideal for isolating **ruggedness** from **deception**.
 
 Ruggedness here means:
 
-> many shallow traps that must be escaped **sequentially**.
+ many shallow traps that must be escaped **sequentially**.
 
 ---
 
@@ -262,9 +262,9 @@ This is **combinatorial ruggedness**, not just “more bumps.”
 
 ---
 
-### What the 1D results show (and why they matter)
+### What the 1D results show
 
-**Observed behavior (from your runs):**
+**Observed behavior (from my runs):**
 
 * Population reaches the global basin reliably
 * Best solution converges to (x \approx 0) across runs
@@ -282,7 +282,7 @@ This establishes a **baseline success regime**.
 
 ### What the 2D results show (the real failure)
 
-**Observed behavior (quantified + animated):**
+**Observed behavior :**
 
 * Median final distance (approximately 1), not near zero
 * Large run-to-run variance
@@ -299,7 +299,7 @@ This is **convergence failure by dilution**, not trapping.
 
 ---
 
-### Dilution of search (key concept)
+### Dilution of search 
 
 As dimension increases:
 
