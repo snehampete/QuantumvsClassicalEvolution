@@ -206,4 +206,5 @@ This distinguishes deceptive landscapes from trivial hard problems.
 ## Final sentence to anchor this section on deceptive landscapes
 
  *Classical genetic algorithms fail on deceptive twin-peaks landscapes not because they lack optimization power, but because early selection amplifies misleading basin structure, causing irreversible commitment under incomplete information.*
+---
 
