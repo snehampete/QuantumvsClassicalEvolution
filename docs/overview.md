@@ -92,7 +92,7 @@ Across the experiments, several consistent patterns emerge:
 
 Taken together, these results support the following inference:
 
-> **Under unitary, coherent dynamics alone, quantum interference redistributes probability in a structure-preserving way; it does not introduce the irreversible disruptions required for evolutionary escape.**
+ **Under unitary, coherent dynamics alone, quantum interference redistributes probability in a structure-preserving way; it does not introduce the irreversible disruptions required for evolutionary escape.**
 
 This conclusion is not obvious a priori. It emerges from observing that interference repeatedly converts existing correlations into amplitude bias, rather than dissolving them. In hindsight this behavior aligns with the defining properties of coherence and reversibility—but the experiments are what demonstrate its concrete consequences for evolutionary search.
 
