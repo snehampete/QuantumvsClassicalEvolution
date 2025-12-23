@@ -83,5 +83,128 @@ For this reason, the parabolic landscape serves strictly as a **control experime
 
 ---
 
-**Conclusion:**
-The plots produced by our code are sufficient for this section. Further analysis on this landscape would be redundant and does not inform the central research question of when (and why) quantum evolution might outperform classical evolution.
+## 1.2 Twin-Peaks Landscape — Deceptive Basin Capture
+
+### Definition of the deceptive twin-peaks landscape
+
+We consider a one-dimensional fitness landscape with two separated optima:
+
+[
+f(x) = 8,e^{-\frac{(x+4)^2}{1.5}} ;+; 10,e^{-\frac{(x-2)^2}{0.2}}
+]
+
+This landscape is deliberately **asymmetric**:
+
+* The **global optimum** is the **narrow, high peak** near (x \approx 2).
+* The **deceptive peak** is the **wider, lower peak** near (x \approx -4).
+
+Although the global peak has higher fitness, the deceptive peak occupies a much larger region of the search space and therefore captures more individuals during early random sampling.
+
+
+
+<img width="622" height="393" alt="image" src="https://github.com/user-attachments/assets/24ff5a62-629d-4a6e-81cb-b7dcde1bb5ec" />
+
+
+
+https://github.com/user-attachments/assets/bb507f54-36e2-470f-9ed5-b5144c7e3a4c
+
+
+
+https://github.com/user-attachments/assets/6c52ce8d-5325-4b7d-922c-c1f7ac70b8e8
+
+
+
+---
+
+### Why this landscape is deceptive
+
+The deception arises not from multiple optima alone, but from **basin geometry**:
+
+* The deceptive basin is **wide and strongly attractive** under local selection.
+* The global basin is **narrow and easy to miss**.
+* The valley between them is low-fitness and steep.
+
+As a result, early evolutionary dynamics are dominated by **basin volume**, not by absolute peak height.
+
+---
+
+### Observed classical GA behavior
+
+Under fixed parameters, repeated runs of the same classical GA produce **different final outcomes**:
+
+* Some runs converge to the global optimum.
+* Other runs irreversibly collapse into the deceptive basin.
+
+This behavior is **probabilistic**, not deterministic.(RNG etc is what decides this)
+The same algorithm, parameters, and landscape can either succeed or fail depending only on early stochastic fluctuations.
+
+---
+
+### Premature convergence and basin capture
+
+**Premature convergence** occurs when selection pressure causes the population to rapidly lose diversity before sufficient exploration has occurred.
+
+In this landscape:
+
+1. Early generations contain individuals in both basins due to random initialization.
+2. The **wider deceptive basin** initially contains more moderately fit individuals.
+3. Tournament selection preferentially amplifies these individuals.
+4. Population variance collapses.
+5. Once variance is low, the population becomes **dynamically trapped** inside the deceptive basin.
+
+This process is called **basin capture**:
+the population commits to a region of the landscape before discovering the true global structure.
+
+---
+
+### Why selection reinforces the wrong basin
+
+Selection operates on **relative fitness within the current population**, not on global information.
+
+If most individuals lie in the deceptive basin:
+
+* Selection compares individuals **only within that basin**.
+* The global peak contributes little or no signal once it is under-sampled.
+* Selection therefore **amplifies the wrong basin**, even though it is globally inferior.
+
+This is not a bug in selection—it is a fundamental limitation of local, population-based optimization.
+
+---
+
+### Why mutation and crossover do not reliably fix the failure
+
+Once basin capture occurs:
+
+* **Mutation**:
+
+  * Small Gaussian mutations rarely produce jumps large enough to cross the low-fitness valley.
+  * Large mutations destroy accumulated fitness and are eliminated by selection.
+* **Crossover**:
+
+  * Operates only on existing genetic material.
+  * When all parents lie in the same basin, crossover cannot generate offspring outside it.
+
+Thus, variation operators cannot overcome the trap **after diversity has collapsed**.
+
+The failure is therefore **irreversible**, not just slow.
+
+---
+
+### Probabilistic failure, not deterministic failure
+
+Crucially, classical evolution does not always fail here.
+
+Instead:
+
+* Failure probability is **non-zero and irreducible**.
+* Early random fluctuations determine which basin captures the population.
+* No fixed parameter setting guarantees success without sacrificing exploitation.
+
+This distinguishes deceptive landscapes from trivial hard problems.
+
+---
+
+## Final sentence to anchor this section on deceptive landscapes
+
+ *Classical genetic algorithms fail on deceptive twin-peaks landscapes not because they lack optimization power, but because early selection amplifies misleading basin structure, causing irreversible commitment under incomplete information.*
+
