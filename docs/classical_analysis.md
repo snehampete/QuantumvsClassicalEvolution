@@ -93,12 +93,6 @@ This landscape is deliberately **asymmetric**:
 
 Although the global peak has higher fitness, the deceptive peak occupies a much larger region of the search space and therefore captures more individuals during early random sampling.
 
-
-
-<img width="622" height="393" alt="image" src="https://github.com/user-attachments/assets/24ff5a62-629d-4a6e-81cb-b7dcde1bb5ec" />
-
-
-
 https://github.com/user-attachments/assets/bb507f54-36e2-470f-9ed5-b5144c7e3a4c
 
 
