@@ -19,9 +19,6 @@ This landscape has a **single global maximum** at (x = 0), no local optima, and 
 1. **Fitness curve** (parabola): shows the global structure of the landscape and the location of the unique optimum.
 2. **Population evolution plot / animation**: shows individuals initially scattered across the domain and progressively collapsing toward (x=0).
 
-   <img width="525" height="389" alt="image" src="https://github.com/user-attachments/assets/121dfc16-bd49-421d-b4a7-07e04b16563f" />
-
-
    
 
 https://github.com/user-attachments/assets/a70516dd-5664-4a39-bb63-d8c82e2edad8
