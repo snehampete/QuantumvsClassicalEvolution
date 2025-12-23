@@ -89,9 +89,8 @@ For this reason, the parabolic landscape serves strictly as a **control experime
 
 We consider a one-dimensional fitness landscape with two separated optima:
 
-[
-f(x) = 8,e^{-\frac{(x+4)^2}{1.5}} ;+; 10,e^{-\frac{(x-2)^2}{0.2}}
-]
+<img width="335" height="76" alt="image" src="https://github.com/user-attachments/assets/85936644-da30-4111-b7db-71864c17b385" />
+
 
 This landscape is deliberately **asymmetric**:
 
