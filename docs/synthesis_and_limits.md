@@ -16,20 +16,24 @@ The experiments in this project show that when raw quantum dynamics are applied 
 
 ---
 
-## Comparison to Grover and Shor (conceptual)
+## Comparison with Grover/Shor algorithms
 
-The limitations observed here are consistent with the structure of successful quantum algorithms.
+The experiments here in my case failed because quantum coherence needs **predictable patterns** to help. Successful quantum algorithms have these; evolutionary problems don't.
 
-Algorithms such as Grover’s and Shor’s do not rely on unconstrained quantum dynamics. Instead, they exploit **rigid global structure**:
+**Grover's search**: Finds one specific target in a huge list using a simple "yes/no" oracle that marks the answer. Quantum just amplifies that known signal.
 
-* Grover’s algorithm operates on a binary oracle with a well-defined marked subspace.
-* Shor’s algorithm reduces factoring to period-finding, exposing algebraic symmetry via the quantum Fourier transform.
+**Shor's factoring**: Finds repeating cycles in numbers (like 3-6-9-12...) using Fourier analysis. The math pattern is rigid and global.
 
-In both cases, quantum coherence aligns naturally with the problem structure.
+**What they share**:
+- Clear, predictable structure across the entire problem
+- Quantum interference naturally boosts the right answer
 
-Evolutionary optimization problems generally lack such rigid global structure. Their difficulty arises precisely from local ruggedness, deceptive gradients, and the need for irreversible exploration. As a result, the conditions under which quantum coherence excels are largely absent.
+**Evolutionary landscapes lack this**:
+- Messy local traps, no global pattern
+- Success requires destroying structure (mutation breaks correlations)
+- No "oracle" or repeating cycles to amplify
 
----
+**Key insight**: My quantum experiments failed for the same reason Grover/Shor would fail on deceptive/rugged landscapes—they have no rigid structure for coherence to exploit.
 
 ## When quantum helps / when it doesn’t
 
