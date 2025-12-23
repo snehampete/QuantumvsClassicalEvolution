@@ -24,8 +24,6 @@
 
 ├── figures/ # Key plots
 
-## Run experiments
-
 ## 4. What is NOT claimed
 
 This project intentionally avoids the usual quantum-optimization claims. In particular, it does **not** assume or invoke:
