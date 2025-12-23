@@ -38,5 +38,15 @@ This project intentionally avoids the usual quantum-optimization claims. In part
 
 The absence of these claims is deliberate: **the goal is not to argue that a quantum algorithm works, but to test whether the physics itself supports the intuition that it should.**
 
+## A note on conclusions and method
+
+It is possible today to obtain a plausible, high-level answer to the question “Does quantum coherence aid evolutionary search?” from a large language model. Such answers often gesture toward decoherence, noise, and irreversibility.
+
+This project begins where those answers end.
+
+Rather than relying on intuition or analogy, the work here isolates quantum mechanisms under controlled conditions and examines their concrete effects on known evolutionary failure modes. Several of the results—most notably cases where interference actively worsens deception—do not follow from the headline conclusion alone and only become visible through explicit construction and experiment.
+
+The goal is therefore not novelty of outcome, but clarity of boundary: identifying which parts of successful quantum-inspired optimization are genuinely quantum, and which depend on classical mechanisms that explicitly break coherence.
+
 ---
 
