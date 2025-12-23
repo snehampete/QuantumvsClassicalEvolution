@@ -15,9 +15,13 @@
 
 ## Repo Structure
 ├── docs/ # Full analysis + derivations
+
 ├── code/ # Classical + quantum experiments
+
 │ ├── classical/ # GA baselines
+
 │ └── quantum/ # Superposition + interference
+
 ├── figures/ # Key plots
 
 ## Run experiments
