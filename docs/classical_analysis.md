@@ -7,7 +7,7 @@ Classical evolutionary algorithms are analyzed first to establish a clear, well-
 We begin with a simple one-dimensional convex fitness landscape defined as
 
 [
-f(x) = 10 - x^2, \qquad x \in [-5,5]
+f(x) = 10 - x^2, x belonging to [-5,5]
 ]
 
 This landscape has a **single global maximum** at (x = 0), no local optima, and a smooth, monotonic gradient toward the peak from any initial position.
