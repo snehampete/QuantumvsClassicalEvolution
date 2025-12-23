@@ -1,52 +1,82 @@
 # Synthesis and Limits
 
-Synthesizes experimental results and clarifies compatibility between quantum dynamics and evolutionary search.
+This document synthesizes the experimental results of the project and clarifies their implications and limitations. The goal is not to propose a new optimization algorithm, but to articulate **what has been learned about the compatibility—and incompatibility—between quantum dynamics and evolutionary search**.
 
-## Why Raw Quantum Conflicts with Evolution
+---
 
-**Quantum**: Unitary, reversible dynamics preserve information, amplify coherent phase structure.  
-**Evolution**: Irreversible, stochastic disruption destroys structure to escape deceptive basins.  
+## Why raw quantum dynamics conflict with evolution
 
-**Experiments show**: Coherence preserves/amplifies where evolution requires breaking.
+At a fundamental level, quantum dynamics and evolutionary search optimize under different principles.
 
-## Comparison to Grover/Shor
+Quantum evolution is governed by unitary, reversible dynamics that preserve information and favor coherent, phase-aligned structure. Interference amplifies smooth global patterns and suppresses incoherent variation.
 
-Successful quantum algorithms exploit **rigid global structure**:
+Evolutionary algorithms, by contrast, rely on irreversibility, stochastic disruption, and noise-driven symmetry breaking. Progress often depends on destroying existing structure—through mutation, selection, and loss of information—to escape deceptive basins.
 
-| Algorithm | Key Structure | Quantum Role |
-|-----------|---------------|-------------|
-| Grover | Binary oracle, marked subspace | Amplifies target amplitude |
-| Shor | Algebraic periodicity | Fourier extracts period |
+The experiments in this project show that when raw quantum dynamics are applied directly to evolutionary representations, this mismatch becomes explicit: coherence preserves or amplifies structure where evolutionary search requires disruption.
 
-**Evolutionary problems lack this**: Local ruggedness + irreversible exploration needs.
+---
 
-## When Quantum Helps / Doesn't
+## Comparison to Grover and Shor (conceptual)
 
-**Effective when**:
-- Global phase-coherent structure exists
-- Objective = stable geometric/algebraic pattern
-- Interference aligns with problem geometry
+The limitations observed here are consistent with the structure of successful quantum algorithms.
 
-**Ineffective when**:
-- Irreversibility/entropy increase required
-- Local disruption needed
-- Naive fitness→phase mapping
+Algorithms such as Grover’s and Shor’s do not rely on unconstrained quantum dynamics. Instead, they exploit **rigid global structure**:
+
+* Grover’s algorithm operates on a binary oracle with a well-defined marked subspace.
+* Shor’s algorithm reduces factoring to period-finding, exposing algebraic symmetry via the quantum Fourier transform.
+
+In both cases, quantum coherence aligns naturally with the problem structure.
+
+Evolutionary optimization problems generally lack such rigid global structure. Their difficulty arises precisely from local ruggedness, deceptive gradients, and the need for irreversible exploration. As a result, the conditions under which quantum coherence excels are largely absent.
+
+---
+
+## When quantum helps / when it doesn’t
+
+The results of this project suggest the following distinction:
+
+Quantum dynamics can be effective when:
+
+* the problem admits a global, phase-coherent structure
+* the objective can be expressed as a stable geometric or algebraic pattern
+* interference can be engineered to align with that structure
+
+Quantum dynamics are ineffective or counterproductive when:
+
+* exploration requires irreversibility or entropy increase
+* progress depends on local disruption rather than global coherence
+* fitness information is naively mapped into phase or amplitude
+
+This does not imply that quantum optimization is impossible, but that its applicability is sharply constrained by problem geometry.
+
+---
 
 ## Implications
 
-### 1. For Quantum Optimization Research
-- **Falsifies naive coherence**: Superposition/interference ≠ evolutionary noise (preserves structure)
-- **Clarifies quantum role**: Representation/mixing, not autonomous exploration
-- **Boundary mapping**: Negative results constrain viable designs
+### 1. For quantum optimization research
 
-### 2. Design Lessons
-- Avoid fitness→phase encodings (worsens deception)
-- Unitary dynamics ≠ irreversibility/diversity
-- Hybrids: Classical = disruption; Quantum = structure amplification
+* **Naive coherence intuition is falsified**: superposition and interference alone do not substitute for evolutionary noise or mutation; they preserve existing structure rather than disrupting it.
+* **The role of quantum effects is clarified**: quantum dynamics function naturally as representation or mixing mechanisms, not as autonomous drivers of exploratory search.
+* **Negative and neutral results are informative**: they map the boundary beyond which coherent dynamics cease to be beneficial, providing constraints for future algorithm design.
 
-### 3. Connection to Established Algorithms
-**Grover/Shor succeed** via rigid structure quantum amplifies.  
-**Evolution resists** coherent treatment: needs local destruction.
+---
 
-## Scope and Limits
-Demonstrates raw quantum principles don't naturally align with evolutionary objectives. Success requires confronting this mismatch explicitly.
+### 2. Design lessons for future work
+
+* Direct fitness-to-phase encodings should be avoided; they can worsen deceptive trapping due to phase incoherence.
+* Unitary quantum dynamics should not be expected to generate irreversibility or exploratory diversity on their own.
+* In hybrid designs, classical components must supply disruption and selection, while quantum components—if used—may amplify or reorganize existing structure rather than create it.
+
+---
+
+### 3. Connection to established quantum algorithms
+
+These results are consistent with why algorithms such as Grover’s and Shor’s succeed: they rely on rigid global structure that quantum coherence can amplify.
+
+By contrast, evolutionary optimization depends on local, irreversible disruption. Quantum dynamics favor global exploitation; evolutionary search depends on breaking structure. The tension between these objectives explains both the limitations observed here and the difficulty of designing coherent quantum evolutionary algorithms.
+
+---
+
+## Scope and limits
+
+This project does not claim that quantum optimization is impossible, nor that hybrid approaches cannot succeed under more restrictive conditions. It demonstrates only that **raw quantum principles do not naturally align with evolutionary search objectives**, and that any successful integration must confront this mismatch directly.
