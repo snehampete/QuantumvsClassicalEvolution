@@ -82,7 +82,7 @@ This represents a clear failure mode, not random noise.
 
 The failure arises from multiple interacting factors:
 
-* **Phase periodicity**: phase wraps modulo (2\pi), while fitness magnitude is unbounded. Large fitness gradients induce rapid phase oscillation and dephasing.
+* **Phase periodicity**: phase wraps modulo (2pi), while fitness magnitude is unbounded. Large fitness gradients induce rapid phase oscillation and dephasing.
 * **Smoothness bias**: interference favors phase-coherent regions rather than tall or narrow peaks.
 * **Misalignment with fitness magnitude**: fitness height does not correspond to phase stability, causing deceptive basins to dominate.
 
