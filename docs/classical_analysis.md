@@ -196,9 +196,6 @@ This distinguishes deceptive landscapes from trivial hard problems.
  *Classical genetic algorithms fail on deceptive twin-peaks landscapes not because they lack optimization power, but because early selection amplifies misleading basin structure, causing irreversible commitment under incomplete information.*
 
  ---
- Below is **research-grade content** you can drop directly into **Section 1.3**. It is aligned with what you actually ran and observed. No overclaims.
-
----
 
 ## 1.3 Rastrigin — Ruggedness × Dimensionality
 
