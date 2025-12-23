@@ -23,6 +23,9 @@
 │ └── quantum/ # Superposition + interference
 
 ├── figures/ # Key plots
+├── notes/ # personal insights
+
+
 
 ## 4. What is NOT claimed
 
