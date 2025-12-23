@@ -206,5 +206,142 @@ This distinguishes deceptive landscapes from trivial hard problems.
 ## Final sentence to anchor this section on deceptive landscapes
 
  *Classical genetic algorithms fail on deceptive twin-peaks landscapes not because they lack optimization power, but because early selection amplifies misleading basin structure, causing irreversible commitment under incomplete information.*
+
+ ---
+ Below is **research-grade content** you can drop directly into **Section 1.3**. It is aligned with what you actually ran and observed. No overclaims.
+
+---
+
+## 1.3 Rastrigin — Ruggedness × Dimensionality
+
+### Definition (what landscape we are testing)
+
+The Rastrigin function is a standard benchmark for rugged optimization. In (d) dimensions:
+
+<img width="399" height="107" alt="image" src="https://github.com/user-attachments/assets/a6791407-d1f0-4e4c-8bdc-084cb9dafbb4" />
+
+* Global optimum at x=0
+* Fitness surface = smooth quadratic envelope + periodic oscillations
+* Every dimension contributes **independent local optima**
+
+This makes it ideal for isolating **ruggedness** from **deception**.
+
+---
+
+### Why Rastrigin is rugged (mechanism, not buzzword)
+
+* The cosine term introduces **regularly spaced local maxima and minima**
+* Gradients are locally misleading but not globally inverted
+* There is no “wrong basin” — the global optimum is visible in principle
+* Difficulty arises because **local improvement signals decorrelate from global progress**
+
+Ruggedness here means:
+
+> many shallow traps that must be escaped **sequentially**.
+
+---
+
+### Why local optima explode with dimensionality
+
+This is the critical scaling argument.
+
+* In 1D:
+  Number of local optima grows linearly with domain length.
+
+* In 2D:
+  Local optima form a **grid**.
+  Count grows roughly as:
+ (ripples per axis)^2
+
+* In (d) dimensions:
+  Local optima scale exponentially:
+  O(k^d)
+Each dimension multiplies the number of simultaneous traps.
+
+This is **combinatorial ruggedness**, not just “more bumps.”
+
+---
+
+### What the 1D results show (and why they matter)
+
+**Observed behavior (from your runs):**
+
+* Population reaches the global basin reliably
+* Best solution converges to (x \approx 0) across runs
+* Remaining motion is local oscillation near the optimum
+
+**Interpretation:**
+
+* Escaping individual barriers is easy
+* Ruggedness alone does **not** defeat classical evolution at low dimension
+* Randomness affects trajectories, not outcomes
+
+This establishes a **baseline success regime**.
+
+---
+
+### What the 2D results show (the real failure)
+
+**Observed behavior (quantified + animated):**
+
+* Median final distance (approximately 1), not near zero
+* Large run-to-run variance
+* Population clusters near the global basin but does not converge
+* Long plateaus in fitness and distance curves
+
+**Interpretation:**
+
+* Progress requires **simultaneous escape** in multiple coordinates
+* Escape probabilities multiply → become small
+* Evolution remains active but inefficient
+
+This is **convergence failure by dilution**, not trapping.
+
+---
+
+### Dilution of search (key concept)
+
+As dimension increases:
+
+* Population spreads over exponentially many local configurations
+* Selection pressure is diluted across many near-equivalent solutions
+* Mutation fixes one coordinate while breaking another
+* Net global progress approaches zero
+
+Formally:
+
+ Finite population size cannot maintain coverage over an exponentially growing search space.
+
+This is why simply increasing population size stops helping.
+
+---
+
+### Why population size does NOT save us
+
+Empirically and conceptually:
+
+* Doubling population gives linear sampling gain
+* Landscape complexity grows exponentially
+* Signal-to-noise ratio in selection collapses
+* More individuals ≠ coordinated multi-dimensional progress
+
+This is why classical GA scaling fails even without deception.
+
+---
+
+
+https://github.com/user-attachments/assets/0215138e-05fb-47e0-bfda-d8db5999e49b
+
+
+
+https://github.com/user-attachments/assets/b57fbf8a-1f3d-4a92-9f73-8f03c2c2fab9
+
+
+
+---
+### One-sentence summary on rastrigin landscapes
+
+ On Rastrigin landscapes, classical genetic algorithms fail not because individual barriers are difficult to escape, but because increasing dimensionality causes an exponential proliferation of local optima that dilutes selection pressure and prevents coordinated multi-dimensional convergence.
+
 ---
 
