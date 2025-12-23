@@ -1,7 +1,7 @@
 
 # Quantum Interference vs Evolutionary Search
 
-*A mechanism-first investigation!*
+*(A mechanism-first investigation)*
 
 **Core question**: Does raw quantum coherence (superposition + interference) naturally aid evolutionary escape from deceptive/rugged fitness landscapes....or does it conflict?
 
