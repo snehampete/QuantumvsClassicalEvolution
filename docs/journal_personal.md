@@ -21,6 +21,32 @@ Edge cases (e.g., zero elitism) can create misleading "memoryless" behavior from
 ### 5. Success on convex landscapes is structurally guaranteed
 Parabola success proves nothing about algorithmic power—it's inevitable due to alignment between fitness gradients, selection pressure, and local variation. Every direction points to same optimum. Real test requires deceptive/multimodal landscapes where alignment breaks.
 
+### 6. **Clarifying ambiguity around mean, median, and IQR in GA analysis**
+
+While analyzing parabolic landscape results, I was confused why the analysis emphasized median curves and IQR bands instead of simpler quantities like the mean. The terms felt statistical rather than algorithmic.
+
+Through questioning, the ambiguity resolved:
+
+**Mean fitness** can be misleading because outliers skew it. For trials with fitness values f₁, f₂, ..., fₙ:
+- Mean = (f₁ + f₂ + ... + fₙ)/n
+- Problem: A few unusually good or bad trials distort this average
+
+**Median fitness** answers: what does a representative run do? It's the middle value when trials are ordered:
+- For n trials, median = f₍ₙ₊₁₎/₂ (if n is odd) or average of f₍ₙ/₂₎ and f₍ₙ/₂₊₁₎ (if n is even)
+- Reflects central behavior without outlier distortion
+
+**IQR (interquartile range)** measures consistency:
+- IQR = Q₃ - Q₁ (75th percentile minus 25th percentile)
+- Narrow IQR → most runs behave similarly
+- Wide IQR → unstable, seed-dependent behavior
+
+On the parabolic landscape, median rapidly converges to the global optimum and IQR collapses quickly, confirming:
+1. The algorithm is reliable
+2. Success isn't dependent on lucky initialization
+3. Variability disappears once the population enters the single global basin
+
+**Key realization:** Mean/median/IQR diagnose robustness versus fragility of evolutionary dynamics. This will be essential later when deceptive landscapes produce wide IQRs indicating genuine failure modes rather than noise.
+
 ---
 
 ## Part 2: Quantum Mechanics Insights
