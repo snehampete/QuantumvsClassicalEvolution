@@ -25,6 +25,8 @@ Parabola success proves nothing about algorithmic power—it's inevitable due to
 
 ## Part 2: Quantum Mechanics Insights
 
+Exploring basic quantum circuits clarified that superposition and entanglement alone do not introduce evolutionary exploration or irreversibility. Unitary quantum dynamics preserves structure rather than disrupting it, making naive quantum genetic algorithms ineffective. This eliminated several tempting but incorrect design directions early and reframed the project toward mechanism-level comparisons rather than algorithmic hybridization.
+
 ### 1. Superposition ≠ exploration or advantage
 **Key:** Uniform quantum superposition + measurement = classical uniform random sampling. Exactly equivalent.
 
