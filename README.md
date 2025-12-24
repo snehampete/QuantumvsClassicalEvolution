@@ -42,7 +42,7 @@ The absence of these claims is deliberate: **the goal is not to argue that a qua
 
 ## A note on conclusions and method
 
-It is possible today to obtain a plausible, high-level answer to the question “Does quantum coherence aid evolutionary search?” from a large language model. Such answers often gesture toward decoherence, noise, and irreversibility.
+It is possible today to obtain a plausible, high-level answer to the small question “Does quantum coherence aid evolutionary search?” by simply prompting LLMs. Such answers often gesture toward decoherence, noise, and irreversibility.
 
 This project begins where those answers end.
 
