@@ -22,7 +22,7 @@
 
 │ └── quantum/ # Superposition + interference
 
-├── figures/ # Key plots
+├── figures/ # some visuals
 
 ├── notes/ # personal insights
 
