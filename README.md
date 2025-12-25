@@ -24,8 +24,6 @@
 
 ├── figures/ # some visuals
 
-├── notes/ # personal insights
-
 
 
 ## 4. What is NOT claimed
