@@ -11,9 +11,9 @@ OUTDIR = "part1_results"
 os.makedirs(OUTDIR, exist_ok=True)
 
 # GA hyperparams (tweak later if needed)
-POP_SIZE = 20
+POP_SIZE = 30
 GENS = 80
-ELITISM =0
+ELITISM =2
 TOURNAMENT_K = 5
 CROSSOVER_PROB = 0.4
 MUTATION_PM = 0.5
