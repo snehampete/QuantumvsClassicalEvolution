@@ -86,7 +86,7 @@ plt.show()
 
 
 # ============================================================
-# EXPERIMENT 2: Phase-Structured Superposition (Interference)
+# EXPERIMENT 2: Phase-Structured Superposition(no interference)
 # ============================================================
 
 
