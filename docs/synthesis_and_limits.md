@@ -14,7 +14,11 @@ Evolutionary algorithms, by contrast, rely on irreversibility, stochastic disrup
 
 The experiments in this project show that when raw quantum dynamics are applied directly to evolutionary representations, this mismatch becomes explicit: coherence preserves or amplifies structure where evolutionary search requires disruption.
 
+Unitary quantum dynamics are linear, norm-preserving, and information-conserving transformations on a Hilbert space. Evolutionary search, in contrast, is a nonlinear, dissipative process that relies on information destruction through selection and stochastic perturbation.
+
+Formally, unitary evolution cannot implement information compression without measurement, whereas evolutionary optimization depends on progressive information compression toward fitness maxima. This structural incompatibility explains why coherent dynamics preserve or amplify existing structure rather than generating the disruptive diversity required for evolutionary escape.
 ---
+
 
 ## Comparison with Grover/Shor algorithms
 
@@ -84,3 +88,19 @@ By contrast, evolutionary optimization depends on local, irreversible disruption
 ## Scope and limits
 
 This project does not claim that quantum optimization is impossible, nor that hybrid approaches cannot succeed under more restrictive conditions. It demonstrates only that **raw quantum principles do not naturally align with evolutionary search objectives**, and that any successful integration must confront this mismatch directly.
+
+## Numerical and modeling limits
+
+All experiments in this project rely on discretized representations of continuous landscapes, finite-resolution histograms, FFT-based unitary mixing, and Monte Carlo sampling from finite populations. These introduce resolution dependence, discretization error, and sampling variance that constrain the precision of observed effects. While these numerical approximations do not alter the qualitative conclusions, they bound quantitative interpretation and highlight that coherent dynamics are being studied here in an idealized, noise-free simulation regime rather than on physical quantum hardware.
+
+## Open problems and future directions
+
+Whether coherent dynamics can encode directional information (e.g., gradients) without selection.
+
+Whether quantum walks or structured unitaries can support exploration without reinforcement.
+
+Whether decoherence or noise can play a constructive role analogous to mutation.
+
+What classes of optimization problems are structurally compatible with unitary dynamics.
+
+How hybrid quantum–classical systems should formally divide exploration and selection roles.
