@@ -44,7 +44,7 @@ It is possible today to obtain a plausible, high-level answer to the small quest
 
 This project begins where those answers end.
 
-Rather than relying on intuition or analogy, the work here isolates quantum mechanisms under controlled conditions and examines their concrete effects on known evolutionary failure modes. Several of the results—most notably cases where interference actively worsens deception—do not follow from the headline conclusion alone and only become visible through explicit construction and experiment.
+Rather than relying on intuition or analogy, the work here isolates quantum mechanisms under controlled conditions and examines their concrete effects on known evolutionary failure modes. Several of the results: most notably cases where interference actively worsens deception,do not follow from the headline conclusion alone and only become visible through explicit construction and experiment.
 
 The goal is therefore not novelty of outcome, but clarity of boundary: identifying which parts of successful quantum-inspired optimization are genuinely quantum, and which depend on classical mechanisms that explicitly break coherence.
 
